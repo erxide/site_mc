@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ma page Minecraft</title>
+	<!-- Inclure le fichier CSS de Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<!-- Ajouter un header avec le titre "마인크래프트" -->
+	<header class="bg-dark p-2">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+			    <a class="navbar-brand m-8 text-white h5" href="/accueil">마인크래프트</a>
+				<div class="ml-auto">
+					<a href="/profil" class="btn btn-primary mr-2">{{ .User.Pseudo }}</a>
+					<a href="/deconnexion" class="btn btn-primary">deconnexion</a>
+				</div>
+			</nav>
+        </div>
+	</header>
+	<section class="py-5 bg-light">
+		<div class="container py-4">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Votre serveur Minecraft</h2>
+                    <div class="d-flex justify-content-center pt-5">
+                        <div class="container text-center mt-5">
+                            <h1>Creation de votre serveur Minecraft !</h1>
+                            <div class="pt-4">
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</section>
+	<section class="py-5">
+		<div class="container py-4">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Comment rejoindre</h2>
+                    <p>Important, pour pouvoir rejoindre nos serveurs minecraft, il faut avoir minecraft java edition et openvpn intallé sur votre ordinateur.</p> <br>
+                    <h3>Se connecter au vpn</h3>
+                    <p>Veuillez aussi, telecharger votre fichier de conf de openvpn <a href="/dlconfserveurvpn">ici</a>, pour pouvoir rejoindre le vpn.</p>
+                </div>
+			</div>
+            <div class="row pt-4">
+                <div class="col-6 border-right">
+                    <h4>Windows</h4>
+                    <ul class="list-group list-group-numbered pt-2">
+                        <li class="list-group-item">
+                            <p>Une fois openvpn installé, et votre fichier de conf téléchagé, faite clic droit sur l'icône openvpn, puis aller dans Import, et clicker sur Import file...</p>
+                            <img title="configopenvpn" src="./assets/img/confopenvpn.jpg" class="img-fluid rounded w-100" alt="config openvpn">
+                            <p class="pt-3">puis chercher le fichier que vous venez de téléchager, et importé le.</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p>Ensuite clicker sur connecter, dans le menu qui viens de s'ajouter dans votre openvpn</p>
+                            <img title="connecteopenvpn" src="./assets/img/test.jpg" class="img-fluid rounded w-100" alt="connecte openvpn">
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-9">
+                                    <p>Si le l'ecran de l'icone openvpn devient vert alors vous etes normalemnt connecter au vpn ^^.</p>
+                                </div>
+                                <div class="col-3">
+                                    <img title="vert" src="./assets/img/vert.jpg" class="img-fluid rounded w-100" alt="si connecte openvpn">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 border-left">
+                    <h4>Linux</h4>
+                    <ul class="list-group list-group-numbered pt-2">
+                        <li class="list-group-item">
+                            <p>ouvrir un terminal</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p>$ sudo openvpn votre-fichier.ovpn</p><p>or</p><p>$ sudo openvpn --config votre-fichier.ovpn</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Tester le VPN</h3> <br>
+                    <p>Dans un terminal faite : $ ping 10.8.0.1</p>
+                    <p>Si aucun des packets n'est perdu alors vous etes bien connecté au vpn.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-5">
+            <div class="row">
+                <h2>Se connecter au serveur minecraft</h2>
+            </div>
+        </div>
+	</section>
+	<section class="py-5 bg-light">
+		<div class="container py-4">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>Notre serveur Minecraft</h2>
+					<p>Pour rejoindre notre propre serveur c'est <a href="/nakar">ici</a> !</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="bg-dark text-white py-3 mb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>À propos de nous</h5>
+              <p>Voici notre projet de fin d'année.</p>
+            </div>
+            <div class="col-md-6">
+              <h5>Contactez-nous</h5>
+              <a href="https://discord.gg/MHvfwQb8g9" class="unstyled">notre discord</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+	<!-- Inclure les fichiers JS de Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
